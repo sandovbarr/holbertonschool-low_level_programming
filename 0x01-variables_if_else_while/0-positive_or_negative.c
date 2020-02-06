@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main going describes negative numbers and posive
- * Return (0)
-*/
+ * main - going describes negative numbers and posive
+ * Return: 0
+ */
 int main(void)
 {
 	int n;
