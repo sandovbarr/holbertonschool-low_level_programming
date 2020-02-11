@@ -1,9 +1,0 @@
-#include "holberton.h"
-int print_last_digit(int)
-{
-	int x;
-
-	x = x % 10;
-
-	return (x);
-}
