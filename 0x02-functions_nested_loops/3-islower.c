@@ -1,6 +1,9 @@
+#include "holberton.h"
+
 /**
- * _islower - give a alphabetic in lowercase
- * Return: 0
+ * _islower - give alphabetic in lowercase
+ * @c: integer
+ * Return: int number
  */
 
 int _islower(int c)
