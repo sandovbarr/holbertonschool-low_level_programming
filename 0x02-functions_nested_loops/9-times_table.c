@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * times_table give us tables 0 - 9
+ * times_table give us tables
  * Return: none
  */
 
