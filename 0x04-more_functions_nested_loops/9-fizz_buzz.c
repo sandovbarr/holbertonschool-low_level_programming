@@ -3,11 +3,10 @@
 
 /**
  * main - print fizz buzz of fizbuzz
- * @n: integer for count
  * Return: none
  */
 
-int main()
+int main(void)
 
 {
 	int n;
@@ -31,5 +30,5 @@ int main()
 			printf("%i ", n);
 		}
 	}
-	return(0);
+	return (0);
 }
