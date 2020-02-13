@@ -12,7 +12,7 @@ void print_diagonal(int n)
 	char k = 92;
 	int i, j;
 
-	if(n > 0)
+	if (n > 0)
 	{
 	for (i = 0; i < n; i++)
 	{
