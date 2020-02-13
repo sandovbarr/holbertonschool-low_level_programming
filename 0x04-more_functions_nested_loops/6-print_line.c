@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * print_line - print lines or spaces
