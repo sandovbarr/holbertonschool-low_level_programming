@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_line - print lines or spaces
+ * print_square - print matrix
  * @size: integer for count
  * Return: none
  */
