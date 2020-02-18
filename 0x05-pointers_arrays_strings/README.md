@@ -1,0 +1,1 @@
+NOw in this project we learn to use ponters, strings and structure, lets go!
