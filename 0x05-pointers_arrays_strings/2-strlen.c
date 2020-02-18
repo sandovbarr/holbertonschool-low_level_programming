@@ -15,10 +15,10 @@ int _strlen(char *s)
 
 	string = s;
 
-	while (*string != '\0')
+	while (*string != '\0') /*mientras que mi apuntador difiera de "\0" */
 	{
-		count++;
-		string++;
+		count++;  /*acá aumenta mi contador*/
+		string++; /*acá aumenta mi posicion del apuntador*/
 	}
 
 	return (count);
