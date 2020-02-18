@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
- * print_rev - prints a string, followed by a new line, in reverse
+ * _strlen - count the index of a string
  * @s: the string wich has beem recived
- * Return: none.
+ * Return: count.
  */
+
 
 int _strlen(char *s)
 {
@@ -24,6 +25,12 @@ int _strlen(char *s)
 
 }
 
+
+/**
+ * print_rev - prints a string, followed by a new line, in reverse
+ * @s: the string wich has beem recived
+ * Return: none.
+ */
 
 void print_rev(char *s)
 {
