@@ -36,7 +36,7 @@ int _strlen(char *s)
 void rev_string(char *s)
 {
 	int tamanos = _strlen(s);
-	char string2[100];
+	char string2[1000];
 
 	char *aps2 = string2; /*apuntador a string 2*/
 
