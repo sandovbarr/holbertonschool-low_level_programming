@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * fizzbuzz - print fizz buzz of fizbuzz
+ * @n: integer for count
+ * Return: none
+ */
+
+
+void main (void)
+
+{
+
+}
