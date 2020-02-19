@@ -30,7 +30,7 @@ int _strlen(char *s)
  * print_rev - prints a string, followed by a new line, in reverse
  * @s: the string wich has beem recived
  * Return: none.
- */
+[<65;38;29M */
 
 void print_rev(char *s)
 {

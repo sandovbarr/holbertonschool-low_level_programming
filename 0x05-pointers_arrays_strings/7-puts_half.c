@@ -16,10 +16,17 @@ void puts_half(char *str)
 	{
 	}
 
+<<<<<<< HEAD
 	if (!(l % 2 == 0))
 	{
 		l = l + 1;
 	}
+=======
+	if(!(l % 2 == 0))
+	  {
+	    l = l + 1;
+	  }
+>>>>>>> 2b55da2bfbccb5f86d0bc4db5c47b82026ff737b
 
 	for (i = (l / 2); i < l ; i++)
 	{
