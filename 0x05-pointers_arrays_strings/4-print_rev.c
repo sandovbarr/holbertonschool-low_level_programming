@@ -10,7 +10,6 @@ void print_rev(char *s)
 {
 
 	int tam, i;
-	char *p;
 
 	for (i = 0; *(s + i) != '\0' ; i++)
 	{
@@ -18,11 +17,9 @@ void print_rev(char *s)
 
 	tam = i;
 
-	p = s;
-
 	for  (tam =  tam; tam >= 0 ; tam--)
 	{
-		_putchar(*(p + tam));
+		_putchar(*(s + tam));
 	}
 	_putchar('\n');
 }
