@@ -8,13 +8,15 @@
 
 void puts2(char *str)
 {
+	int l, i;
 
-	int i = 0;
+	for (l = 0; *(str + l) != '\0'; l++) /* calcula tamaño del array */
+	{
+	}
 
-	while (*(str + i) != '\0')
+	for (i = 0; i < l; i += 2)
 	{
 		_putchar(*(str + i));
-		i = i + 2;
 	}
 	_putchar('\n');
 }
