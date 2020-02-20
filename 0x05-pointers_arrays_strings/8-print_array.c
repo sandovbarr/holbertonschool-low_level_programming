@@ -10,11 +10,10 @@
 void print_array(int *a, int n)
 {
 	int i;
-	int tam = sizeof(a) - sizeof(n);
 
-	for (i = 0; i <= tam; i++)
+	for (i = 0; i <= n; i++)
 	{
-		if (i == tam)
+		if (i == n)
 		{
 			printf("%d", *(a + i));
 			break;
