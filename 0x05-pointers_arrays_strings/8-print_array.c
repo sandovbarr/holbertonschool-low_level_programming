@@ -7,14 +7,14 @@
  * Return: Always 0.
  */
 
-
 void print_array(int *a, int n)
 {
 	int i;
+	int tam = sizeof(a) - sizeof(n);
 
-	for (i = 0; i <= n; i++)
+	for (i = 0; i <= tam; i++)
 	{
-		if (i == n - 1)
+		if (i == tam)
 		{
 			printf("%d", *(a + i));
 			break;
