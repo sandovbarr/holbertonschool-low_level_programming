@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * string_touper - check the code for Holberton School students.
+ * *string_toupper - check the code for Holberton School students.
  * @i: pinter
- * Return: i.
+ * Return: pointer.
  */
 
 char *string_toupper(char *i)
