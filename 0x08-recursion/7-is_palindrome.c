@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _strlen_recursion - return the leng of a string
  * @s: pointer to string
@@ -51,18 +49,4 @@ int is_palindrome(char *s)
 	int len = _strlen_recursion(s) - 1;
 
 	return (operation(s, len));
-}
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int r;
-
-	r = is_palindrome("levpel");
-	printf("%d\n", r);
-	return (0);
 }
