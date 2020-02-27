@@ -18,10 +18,10 @@ void puts_half(char *str)
 
 	if (!(t % 2 == 0))
 	{
-		t = t - 1;
+		t = t + 1;
 	}
 
-	for (i = (t / 2); i < t ; i++)
+	for (i = (t / 2); i < t - 1 ; i++)
 	{
 		_putchar(*(str + i));
 	}
