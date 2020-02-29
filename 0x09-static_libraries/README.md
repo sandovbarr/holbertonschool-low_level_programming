@@ -1,0 +1,1 @@
+make the life simple, use static libraries! 
