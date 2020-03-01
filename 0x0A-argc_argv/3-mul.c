@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	if (!argv[1] || !argv[2])
 	{
 		printf("Error\n");
-		return (0);
+		return (1);
 	}
 	i = _atoi(argv[1]);
 	j = _atoi(argv[2]);
