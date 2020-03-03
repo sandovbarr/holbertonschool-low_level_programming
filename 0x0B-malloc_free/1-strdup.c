@@ -30,5 +30,8 @@ char *_strdup(char *str)
 		p[j] = str[j];
 	}
 
+	if (p == NULL)
+		return (NULL);
+
 	return (p);
 }
