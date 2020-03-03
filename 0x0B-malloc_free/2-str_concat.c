@@ -10,9 +10,9 @@
 
 char *str_concat(char *s1, char *s2)
 {
-        int i, j, t, m, n;
-        int o = 0;
-        char *p;
+	int i, j, t, m, n;
+	int o = 0;
+	char *p;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -42,7 +42,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		p[n] = s2[o];
 		o++;
-		if(s2[o - 1] == '\0')
+		if (s2[o - 1] == '\0')
 			break;
 	}
 
