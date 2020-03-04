@@ -45,4 +45,5 @@ char *argstostr(int ac, char **av)
 	}
 	arrayconc[count1 + 1] = '\0';
 	return (arrayconc);
+
 }
