@@ -43,7 +43,7 @@ char *argstostr(int ac, char **av)
 		arrayconc[count1] = '\n';
 		count1++;
 	}
-	arrayconc[count1 + 1] = '\0';
+	arrayconc[count1] = '\0';
 	return (arrayconc);
 
 }
