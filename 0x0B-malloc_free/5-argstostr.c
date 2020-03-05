@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 	char *arrayconc;
 	int i, j, count = 0, count1 = 0;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 1 || av == NULL)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
