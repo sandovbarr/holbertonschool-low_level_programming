@@ -8,23 +8,22 @@
  * @min: min of intergers
  * @max: max of integers
  * Return: pointer to the new array
- * If min > max, return NULL
  * If malloc fails, return NULL
  */
 
 int *array_range(int min, int max)
 {
 	int *ptr;
-	int res = (max - min) + 1 , i;
+	int res = (max - min) + 1, i;
 
-	if (min >= max)
+	if (min > max)
 		return (NULL);
 
 	ptr = malloc(sizeof(int) * res);
 	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < res; i++,min++)
+	for (i = 0; i < res; i++, min++)
 	{
 		ptr[i] = min;
 	}
