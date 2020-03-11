@@ -8,7 +8,7 @@
  * perform the operation asked by the user.
  * @argc: arguments counter
  * @argv: arguments values
- * return: integer
+ * Return: integer
  */
 
 

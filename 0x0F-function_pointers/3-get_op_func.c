@@ -1,6 +1,12 @@
 #include "3-calc.h"
 #include <stdio.h>
 
+/**
+ * get_op_func - contain the function that selects the correct function
+ * to perform the operation asked by the user
+ * @s: pointer
+ * Return: always
+ */
 
 int (*get_op_func(char *s))(int, int)
 {
