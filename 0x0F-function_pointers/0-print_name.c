@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "function_pointers.h"
 
 /**
  * print_name - function that put the pointer name into
@@ -8,7 +8,7 @@
  * Return: no return;
  */
 
-void print_name(char *name, void (*f)(char *));
+void print_name(char *name, void (*f)(char *))
 {
 	(*f)(name);
 }
