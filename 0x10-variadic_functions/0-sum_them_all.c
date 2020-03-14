@@ -3,6 +3,7 @@
 /**
  * sum_them_all - function that add his parameters
  * @n: numbers of arguments
+ *
  * Return: integer
  */
 
