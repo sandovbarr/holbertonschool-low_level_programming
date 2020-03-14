@@ -5,6 +5,12 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * struct formats - struct for options
+ * @opc: pointer to determinate options
+ * @f: pointer to functions
+ */
+
 typedef struct formats
 {
 	char *opc;
