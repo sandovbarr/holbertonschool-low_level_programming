@@ -19,6 +19,6 @@ void print_integer(va_list);
 void print_char(va_list);
 void print_string(va_list);
 void print_float(va_list);
+int _putchar(char c);
 
 #endif
-
