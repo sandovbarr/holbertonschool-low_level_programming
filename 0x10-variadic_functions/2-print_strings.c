@@ -38,11 +38,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		else if (i == n - 1)
 		{
-			printf("%s\n", p);
+			printf("%s", p);
 		}
 		else
 		{
 			printf("%s%s", p, separator);
 		}
 	}
+	va_end(parameters);
+	printf("\n");
 }
