@@ -7,7 +7,7 @@
  */
 void print_integer(va_list arguments)
 {
-	printf ("%i", va_arg(arguments, int));
+	printf("%i", va_arg(arguments, int));
 }
 
 /**
@@ -18,20 +18,20 @@ void print_integer(va_list arguments)
 
 void print_char(va_list arguments)
 {
-	printf ("%c", va_arg(arguments, int));
+	printf("%c", va_arg(arguments, int));
 }
 
 /**
  * print_string - prints strings
- * @s: pointer
+ * @arguments: get arguments
  * Return: none
  */
 void print_string(va_list arguments)
 {
 	if (arguments == NULL)
-		printf ("(nill)");
+		printf("(nill)");
 	else
-	printf ("%s", va_arg(arguments, char *));
+	printf("%s", va_arg(arguments, char *));
 }
 
 /**
@@ -42,7 +42,7 @@ void print_string(va_list arguments)
 
 void print_float(va_list arguments)
 {
-	printf ("%f", va_arg(arguments, double));
+	printf("%f", va_arg(arguments, double));
 }
 
 
@@ -68,7 +68,8 @@ void print_all(const char * const format, ...)
 	char *sep = "";
 
 	va_list arguments;
-	va_start (arguments, format);
+
+	va_start(arguments, format);
 
 	while (format[i])
 	{
@@ -76,7 +77,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == select[j].opc[0])
 			{
-				printf ("%s", sep);
+				printf("%s", sep);
 				select[j].f(arguments);
 				sep = ", ";
 			}
@@ -86,5 +87,5 @@ void print_all(const char * const format, ...)
 		j = 0;
 	}
 	printf("\n");
-	va_end (arguments);
+	va_end(arguments);
 }
