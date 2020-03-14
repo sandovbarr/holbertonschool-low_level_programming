@@ -12,6 +12,9 @@ int sum_them_all(const unsigned int n, ...)
 	int sum = 0;
 	va_list arguments;
 
+	if (arguments == NULL)
+		return (0);
+
 	if (n == 0)
 		return (0);
 
