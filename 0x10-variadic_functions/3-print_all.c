@@ -7,7 +7,7 @@
  */
 void print_integer(va_list arguments)
 {
-	printf("%i", va_arg(arguments, int));
+	printf("%d", va_arg(arguments, int));
 }
 
 /**
@@ -40,12 +40,12 @@ void print_string(va_list arguments)
 /**
  * print_float - print float numbers
  * @arguments: that recive
- *
+ * Return: none
  */
 
 void print_float(va_list arguments)
 {
-	printf("%f", va_arg(arguments, double));
+	printf("%f", (float)va_arg(arguments, double));
 }
 
 
