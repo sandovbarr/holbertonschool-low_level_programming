@@ -18,7 +18,7 @@ void print_integer(va_list arguments)
 
 void print_char(va_list arguments)
 {
-	printf("%c", (char)va_arg(arguments, int));
+	printf("%c", va_arg(arguments, int));
 }
 
 /**
@@ -30,7 +30,7 @@ void print_string(va_list arguments)
 {
 	char *j = va_arg(arguments, char*);
 
-	if (!*j)
+	if (j == NULL)
 	{
 		j = "(nil)";
 	}
@@ -45,7 +45,7 @@ void print_string(va_list arguments)
 
 void print_float(va_list arguments)
 {
-	printf("%f", (float)va_arg(arguments, double));
+	printf("%f", va_arg(arguments, double));
 }
 
 
