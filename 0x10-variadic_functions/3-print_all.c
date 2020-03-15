@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 		{"c", print_char},
 		{"i", print_integer},
 		{"f", print_float},
-		{"s", print_string},
+		{"s", print_string}
 	};
 
 	int i = 0;
