@@ -24,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		p = va_arg(parameters, char*);
 
-		if (separator == NULL)
+		if (separator == NULL || i == n - 1)
 		{
 			printf("%s", p);
 		}
@@ -35,10 +35,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else if (p == NULL && (i == n - 1))
 		{
 			printf("(nil)");
-		}
-		else if (i == n - 1)
-		{
-			printf("%s", p);
 		}
 		else
 		{
