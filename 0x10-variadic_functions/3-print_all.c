@@ -28,10 +28,13 @@ void print_char(va_list arguments)
  */
 void print_string(va_list arguments)
 {
-	if (arguments == NULL)
-		printf("(nill)");
-	else
-	printf("%s", va_arg(arguments, char *));
+	char *j = va_arg(arguments, char*);
+
+	if (!*j)
+	{
+		j = "(nil)";
+	}
+	printf("%s", j);
 }
 
 /**
