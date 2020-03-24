@@ -10,18 +10,18 @@
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int counter = 0; /* counterlist = 0;*/
-	listint_t *scooch, *deletenode;/* *filter;*/
+	unsigned int counter = 0, counterlist = 0;
+	listint_t *scooch, *deletenode, *filter;
 
-/*	filter = *head;
-	while (*head)
+	filter = *head;
+	while (filter && filter->next != NULL)
 		{
-			filter = filter->next;
-			counterlist++;
+		filter = filter->next;
+		counterlist++;
 		}
 
 	if (index > counterlist)
-		return (-1); **/
+		return (-1);
 
 	if (!*head)
 		return (-1);
@@ -30,10 +30,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (index > 0)
 	{
-		while (*head && counter < index -1)
+		while (*head && counter < index - 1)
 		{
-			scooch = scooch->next;
-			counter++;
+		scooch = scooch->next;
+		counter++;
 		}
 		deletenode = scooch;
 		deletenode = deletenode->next;
