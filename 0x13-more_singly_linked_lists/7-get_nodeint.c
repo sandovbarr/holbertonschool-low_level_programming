@@ -17,16 +17,16 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 	while (pointer && counter < index)
 	{
-	pointer = pointer->next;
-	counter++;
+		pointer = pointer->next;
+		counter++;
 	}
 
 	if (pointer != NULL)
 	{
-	return (pointer);
+		return (pointer);
 	}
 	else
 	{
-	return (NULL);
+		return (NULL);
 	}
 }
