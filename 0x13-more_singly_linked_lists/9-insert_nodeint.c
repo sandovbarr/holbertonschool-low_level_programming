@@ -34,7 +34,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		filter = filter->next, counter2++;
 	if (idx == counter2)
 		return (add_nodeint_end(head, n));
-	if (idx >= counter2)
+	if (idx > counter2)
 		return (NULL);
 	newnode = malloc(sizeof(listint_t));
 	if (!newnode)
