@@ -14,7 +14,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *scooch;
 	listint_t *newnode;
-	unsigned int counter = 1;
+	unsigned int counter = 0;
 
 	newnode = malloc(sizeof(listint_t));
 	if (!newnode)
@@ -27,7 +27,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	scooch = *head;
 
-	while (scooch && counter < idx)
+	while (scooch && counter < idx - 1)
 	{
 		scooch = scooch->next;
 		counter++;
