@@ -15,7 +15,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *scooch, *newnode, *filter;
 	unsigned int counter = 0, counter2 = 0;
 
-	if (!*head)
+	if (!*head || !idx)
 		return (NULL);
 	if (idx == 0)
 	{
