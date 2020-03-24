@@ -12,8 +12,10 @@ int pop_listint(listint_t **head)
 {
 	listint_t *pointer;
 
-	pointer = *head;
+	if (!*head)
+		return (0);
 
+	pointer = *head;
 	int copy  = pointer->n;
 
 	pointer = pointer->next;
