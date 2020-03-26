@@ -11,7 +11,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int loop = 0, int base = 1, int suma = 0, int i = 0, int m = 0;
+	int loop = 0, base = 1, suma = 0, i = 0, m = 0;
 	char *binv;
 
 	while (b[loop] != '\0')
@@ -32,18 +32,19 @@ unsigned int binary_to_uint(const char *b)
 	binv[i] = '\0';
 	i = 0;
 
-	for (i = 0; binv[i] ; i++)
+	for (i = 0; binv[i]; i++)
 	{
 		if (binv[i] == '1' && i == 0)
 		suma = 1;
 
 		if (binv[i] == '1' && i > 0)
 		{
-			for (m; m < i; m++)
+			for (m = 0; m < i; m++)
 			{
 				base *= 2;
 			}
 			suma += base;
+			base = 1;
 		}
 	}
 	free(binv);
