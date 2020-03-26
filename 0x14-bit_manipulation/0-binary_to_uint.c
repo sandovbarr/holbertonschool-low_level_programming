@@ -14,6 +14,9 @@ unsigned int binary_to_uint(const char *b)
 	int loop = 0, base = 1, suma = 0, i = 0, m = 0;
 	char *binv;
 
+	if (b == NULL)
+		return (0);
+
 	while (b[loop] != '\0')
 	{
 		if (b[loop] != '0' && b[loop] != '1')
