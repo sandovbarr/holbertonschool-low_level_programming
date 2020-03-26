@@ -32,9 +32,7 @@ unsigned int binary_to_uint(const char *b)
 		binv[i] = b[loop];
 		i++, loop--;
 	}
-	binv[i] = '\0';
-	i = 0;
-
+	binv[i] = '\0', i = 0;
 	for (i = 0; binv[i]; i++)
 	{
 		if (binv[i] == '1' && i == 0)
