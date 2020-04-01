@@ -39,7 +39,7 @@ int main(int argc, char *av[])
 		}
 	} while (fread == 1024);
 
-	if (close(f1) == -1)	
+	if (close(f1) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1), exit(100);
 	if (close(f2) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2), exit(100);
