@@ -18,23 +18,23 @@ int main(int argc, char *av[])
 	f1 = open(av[1], O_RDONLY);
 	if (f1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	f2 = open(av[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
 	if (f2 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n"), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	do {
 		fread = read(f1, buffer, 1024);
 		if (fread == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n");
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",av[1]);
 			exit(98);
 		}
 		fwrite = write(f2, buffer, fread);
 		if (fwrite == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
 	} while (fread == 1024);
