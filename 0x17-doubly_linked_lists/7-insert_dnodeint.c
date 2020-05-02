@@ -34,15 +34,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	while (aux)
 	{
-		if (idx == i)
+		if (idx == iter)
 		{
-			aux->prev = node->prev;
-			aux->next = newnode;
-			newnode->prev = aux;
-			aux->prev->next = aux;
+			aux->prev->next = newnode;
+			newnode->prev = aux->prev;
+			aux->prev = newnode;
+			newnode->next = aux;
 			return (newnode);
 		}
-		if (!newnode->next && idx == iter + 1)
+		if (!aux->next && idx == iter + 1)
 			return (free(newnode), add_dnodeint_end(h, n));
 		aux = aux->next;
 		iter++;
