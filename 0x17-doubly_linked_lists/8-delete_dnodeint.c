@@ -3,9 +3,9 @@
 /**
  * delete_dnodeint_at_index - function that deletes
  * a node at a given position.
- * @h: pointer to head
+ * @head: pointer to head
  * @index: index given to insert node
- * Returns: 1 if it succeeded, -1 if it failed
+ * Return: 1 if it succeeded, -1 if it failed
  */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
@@ -24,6 +24,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	while (aux)
 	{
+		if (!aux->next)
+		{
+			aux2 = aux->prev;
+			aux2->next = NULL;
+			return (free(aux), 1);
+		}
 		if (iter == index)
 		{
 			aux2 = aux->prev;
