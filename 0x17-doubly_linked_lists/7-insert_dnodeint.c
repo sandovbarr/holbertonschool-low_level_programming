@@ -6,7 +6,7 @@
  * @h: pointer to head
  * @idx: index given to insert node
  * @n: value for newnode
- * Returns: the address of the new node, or NULL if it failed
+ * Return: the address of the new node, or NULL if it failed
  * if it is not possible to add the new node at index idx
  * do not add the new node and return NULL
  */
@@ -35,6 +35,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		{
 			newnode->next = aux->next;
 			newnode->prev = aux;
+			aux->next->prev = newnode;
 			aux->next = newnode;
 			return (newnode);
 		}
