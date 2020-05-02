@@ -40,8 +40,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			newnode->next = aux;
 			return (newnode);
 		}
-		if (!aux->next && idx == iter + 1)
-			return (free(newnode), add_dnodeint_end(h, n));
 		aux = aux->next;
 		iter++;
 	}
