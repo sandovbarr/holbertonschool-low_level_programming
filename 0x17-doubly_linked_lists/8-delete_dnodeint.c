@@ -24,7 +24,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	while (aux)
 	{
-		if (!aux->next)
+		if (!aux->next && iter == index)
 		{
 			aux2 = aux->prev;
 			aux2->next = NULL;
