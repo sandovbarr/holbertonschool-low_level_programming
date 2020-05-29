@@ -14,17 +14,15 @@ void hash_table_print(const hash_table_t *ht)
 	if (!ht)
 		return;
 
-	while (iterator <= ht->size)
+	while (iterator < ht->size)
 	{
 		if (ht->array[iterator] != NULL)
-		{
 			position = iterator;
-		}
 		iterator++;
 	}
 	iterator = 0;
 	printf("{");
-	while (iterator <= ht->size)
+	while (iterator < ht->size)
 	{
 		if (ht->array[iterator] != NULL)
 		{
