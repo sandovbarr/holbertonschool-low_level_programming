@@ -17,29 +17,25 @@ void hash_table_delete(hash_table_t *ht)
 
 	while (iterator <= ht->size)
 	{
-		if (ht->array[iterator] != NULL)
+		nodes = ht->array[iterator];
+		while (nodes)
 		{
-			nodes = ht->array[iterator];
-			while (nodes)
+			if (nodes->next)
 			{
-				if(nodes->next)
-				{
-					nodeshanlder = nodes->next;
-					free(nodes->value);
-					free(nodes->key);
-					free(nodes);
-					nodes = nodeshanlder;
-				}
-				else
-				{
-					free(nodes->value);
-					free(nodes->key);
-					free(nodes);
-					break;
-				}				
-				nodes = nodes->next;
+				nodeshanlder = nodes->next;
+				free(nodes->value);
+				free(nodes->key);
+				free(nodes);
+				nodes = nodeshanlder;
 			}
-			iterator++;
+			else
+			{
+				free(nodes->value);
+				free(nodes->key);
+				free(nodes);
+				break;
+			}
+			nodes = nodes->next;
 		}
 		iterator++;
 	}
