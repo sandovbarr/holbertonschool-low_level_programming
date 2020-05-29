@@ -5,18 +5,17 @@
  * @ht: is the hash table
  * Return: none
  */
-
 void hash_table_delete(hash_table_t *ht)
 {
-	unsigned long int iterator = 0;
+	unsigned long int idx = 0;
 	hash_node_t *nodes, *nodeshanlder;
 
 	if (!ht)
 		return;
 
-	while (iterator < ht->size)
+	for (; idx < ht->size; idx++)
 	{
-		nodes = ht->array[iterator];
+		nodes = ht->array[idx];
 		while (nodes)
 		{
 			nodeshanlder = nodes->next;
@@ -25,7 +24,6 @@ void hash_table_delete(hash_table_t *ht)
 			free(nodes);
 			nodes = nodeshanlder;
 		}
-		iterator++;
 	}
 	free(ht->array);
 	free(ht);
