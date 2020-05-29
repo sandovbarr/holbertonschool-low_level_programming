@@ -8,12 +8,21 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int iterator = 0;
+	unsigned long int iterator = 0, position = 0;
 	hash_node_t *nodes = NULL;
 
 	if (!ht)
 		return;
 
+	while (iterator <= ht->size)
+	{
+		if (ht->array[iterator] != NULL)
+		{
+			position = iterator;
+		}
+		iterator++;
+	}
+	iterator = 0;
 	printf("{");
 	while (iterator <= ht->size)
 	{
@@ -22,12 +31,11 @@ void hash_table_print(const hash_table_t *ht)
 			nodes = ht->array[iterator];
 			while (nodes)
 			{
-				if(nodes->next)
-					printf("'%s': '%s', ", nodes->key, nodes->value);
-				else
-					printf("'%s': '%s'", nodes->key, nodes->value);
+				printf("'%s': '%s'", nodes->key, nodes->value);
 				nodes = nodes->next;
 			}
+			if (iterator < position)
+				printf(", ");
 			iterator++;
 		}
 		iterator++;
