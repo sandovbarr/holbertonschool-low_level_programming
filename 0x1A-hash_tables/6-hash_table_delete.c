@@ -20,22 +20,11 @@ void hash_table_delete(hash_table_t *ht)
 		nodes = ht->array[iterator];
 		while (nodes)
 		{
-			if (nodes->next)
-			{
-				nodeshanlder = nodes->next;
-				free(nodes->value);
-				free(nodes->key);
-				free(nodes);
-				nodes = nodeshanlder;
-			}
-			else
-			{
-				free(nodes->value);
-				free(nodes->key);
-				free(nodes);
-				break;
-			}
-			nodes = nodes->next;
+			nodeshanlder = nodes->next;
+			free(nodes->value);
+			free(nodes->key);
+			free(nodes);
+			nodes = nodeshanlder;
 		}
 		iterator++;
 	}
