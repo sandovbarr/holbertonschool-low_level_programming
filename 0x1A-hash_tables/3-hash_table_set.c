@@ -44,8 +44,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		iter = iter->next;
 	}
-	iter = ht->array[hash_idx];
-	newnode->next = iter->next;
+	newnode->next = ht->array[hash_idx];
 	ht->array[hash_idx] = newnode;
 	return (1);
 }
