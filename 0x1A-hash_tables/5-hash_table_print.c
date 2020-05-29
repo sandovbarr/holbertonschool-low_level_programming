@@ -24,17 +24,13 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	while (iterator < ht->size)
 	{
-		if (ht->array[iterator] != NULL)
+		nodes = ht->array[iterator];
+		while (nodes)
 		{
-			nodes = ht->array[iterator];
-			while (nodes)
-			{
-				printf("'%s': '%s'", nodes->key, nodes->value);
-				nodes = nodes->next;
-			}
+			printf("'%s': '%s'", nodes->key, nodes->value);
 			if (iterator < position)
 				printf(", ");
-			iterator++;
+			nodes = nodes->next;
 		}
 		iterator++;
 	}
