@@ -20,10 +20,9 @@ void hash_table_delete(hash_table_t *ht)
 		if (ht->array[iterator] != NULL)
 		{
 			nodes = ht->array[iterator];
-			nodeshanlder = nodes;
 			while (nodes)
 			{
-				if (nodes->next)
+				if(nodes->next)
 				{
 					nodeshanlder = nodes->next;
 					free(nodes->value);
@@ -37,16 +36,13 @@ void hash_table_delete(hash_table_t *ht)
 					free(nodes->key);
 					free(nodes);
 					break;
-				}
+				}				
 				nodes = nodes->next;
 			}
 			iterator++;
-			printf("interator is %lu\n", iterator);
-			printf("ht->array[iterator] is: %s\n", (char *)ht->array[iterator]);
 		}
 		iterator++;
 	}
 	free(ht->array);
-	printf("ht->array is: %lu\n",sizeof(ht->array));
 	free(ht);
 }
