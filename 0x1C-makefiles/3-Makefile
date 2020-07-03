@@ -1,0 +1,31 @@
+CC = gcc
+SRC = main.c holberton.c
+OBJ = main.o holberton.o
+NAME = holberton
+RM = rm -f
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+main.o : main.c m.h
+holberton.o : holberton.c m.h
+
+clean: FORCE
+	$(RM) *~ $(NAME)
+FORCE:
+
+oclean: FORCE
+	$(RM) $(OBJ)
+FORCE:
+
+fclean: FORCE
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
+FORCE:
+
+re: all
+	$(RM) $(OBJ)
+	main.o : main.c m.h
+	holberton.o : holberton.c m.h
+	$(CC) $(OBJ) -o $(NAME)
+FORCE:
