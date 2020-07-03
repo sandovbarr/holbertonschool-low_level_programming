@@ -1,14 +1,11 @@
 CC = gcc
 SRC = main.c holberton.c
-OBJ = main.o holberton.o
+OBJ = $(SRC:%.c=%.o)
 NAME = holberton
 RM = rm -f
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
-main.o : main.c m.h
-holberton.o : holberton.c m.h
 
 clean: FORCE
 	$(RM) *~ $(NAME)
@@ -23,9 +20,8 @@ fclean: FORCE
 	$(RM) $(OBJ)
 FORCE:
 
-re: all
+re:
 	$(RM) $(OBJ)
-	main.o : main.c m.h
-	holberton.o : holberton.c m.h
+	gcc -c $(SRC)
 	$(CC) $(OBJ) -o $(NAME)
 FORCE:
