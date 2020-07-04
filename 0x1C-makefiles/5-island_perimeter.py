@@ -8,10 +8,17 @@
 
 def island_perimeter(grid):
     ''' computes perimeter of island grid given '''
-    counter = 0
-    per = 0
-    for row in grid:
-        counter += row.count(1)
-    counter += 1
-    per = counter * 2
-    return(per)
+    cellvalue = 0
+
+    for row in range(len(grid)):
+        for col in range(len(grid[row])):
+            if grid[row][col] == 1:
+                if grid[row + 1][col] == 0:
+                    cellvalue += 1
+                if grid[row - 1][col] == 0:
+                    cellvalue += 1
+                if grid[row][col + 1] == 0:
+                    cellvalue += 1
+                if grid[row][col - 1] == 0:
+                    cellvalue += 1
+    return(cellvalue)
