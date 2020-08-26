@@ -12,47 +12,46 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-        size_t mid = size / 2;
-
-        if(mid %2 != 0 || mid > 1)
-                mid--;
-
-        // printf("size: ------------------------------------------------[%lu]\n", size); 
-        printf("mid: [%lu] array[mid]: [%d]\n", mid, array[mid]);
-        // printf("value: -----------------------------------------------[%d]\n", value);
+        size_t min = 0, max = size -1, mid = 0;
 
         if(!array)
-                return(-1);
+                return (-1);
 
-        print_array(array, size);
-        sleep(1);
+        while (min <= max)
+        {
+                print_array(array, min, max);
+                sleep(1);
 
-        if (array[mid] == value)
-                return (mid);
-        if (value > array[mid])
-                binary_search(&array[mid - 1], mid,  value); 
-        else if (value < array[mid])
-                binary_search(array, mid, value);
-        return(-555555555);
+                if (min != max)
+                        mid = min + ((max - min) / 2);
+                else
+                        mid = min;
+                if (array[mid] == value)
+                        return(mid);
+                else if (array[mid] < value)
+                        min = mid + 1;
+                else
+                        max = mid - 1;
+        }
+        return(-1);
 }
 
 /**
  * print_array - prints array given
  * @array: pointer to array
- * @size: cant elements of array
+ * @min: min to print
+ * @max: max to print
  * Return: none
  */
-void print_array(int *array, size_t size)
+void print_array(int *array, size_t min, size_t max)
 {
-        size_t idx = 0;
-
         printf("Searching in array: ");
-        while (idx < size)
+        while (min <= max)
         {
-                if (idx == size - 1)
-                        printf("%d\n",array[idx]);
+                if (min == max)
+                        printf("%d\n",array[min]);
                 else
-                        printf("%d, ",array[idx]);
-                idx++;
+                        printf("%d, ",array[min]);
+                min++;
         }
 }
